@@ -58,17 +58,17 @@
     window.addEventListener('DOMContentLoaded', () => {
       const scrollGallery = document.querySelector('.scroll-gallery');
       if (scrollGallery) {
-        const scrollAmount = scrollGallery.querySelector('img').clientWidth + 10; // image width + gap
-        let scrollPosition = 0;
-        const maxScroll = scrollGallery.scrollWidth - scrollGallery.clientWidth;
+        const images = scrollGallery.querySelectorAll('img');
+        let currentIndex = 0;
 
         setInterval(() => {
-          scrollPosition += scrollAmount;
-          if (scrollPosition > maxScroll) {
-            scrollPosition = 0;
+          currentIndex++;
+          if (currentIndex >= images.length) {
+            currentIndex = 0;
           }
+          const scrollAmount = images[currentIndex].offsetLeft;
           scrollGallery.scrollTo({
-            left: scrollPosition,
+            left: scrollAmount,
             behavior: 'smooth'
           });
         }, 5000);
@@ -89,12 +89,21 @@
   </nav>
   <section id="home">
     <div class="gallery scroll-gallery">
-      <img src="images/IMG_5244.JPEG.jpg" alt="Poster 1" />
-      <img src="images/IMG_7128.JPEG.jpg" alt="Poster 2" />
-      <img src="images/IMG_5752.JPEG.jpg" alt="Poster 3" />
-      <img src="images/IMG_5811.JPEG.jpg" alt="Poster 4" />
-      <img src="images/IMG_6990.JPEG.jpg" alt="Poster 5" />
-      <img src="images/IMG_7496.JPEG.jpg" alt="Poster 6" />
+      <a href="https://youtu.be/trailer_link" target="_blank" style="text-align:center; display:block; color:#ff4040; font-weight:bold;">
+        <img src="images/IMG_7192.JPEG.jpg" alt="Trailer" />
+        <div>Trailer</div>
+        <button style="margin-top: 5px; background-color: #ff4040; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer;">Watch Now</button>
+      </a>
+      <a href="https://youtu.be/full_shortfilm_link" target="_blank" style="text-align:center; display:block; color:#ff4040; font-weight:bold;">
+        <img src="images/IMG_7334.JPEG.jpg" alt="Full Short Film" />
+        <div>Full Short Film</div>
+        <button style="margin-top: 5px; background-color: #ff4040; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer;">Watch Now</button>
+      </a>
+      <a href="https://youtu.be/uSojzhmpekQ" target="_blank" style="text-align:center; display:block; color:#ff4040; font-weight:bold;">
+        <img src="images/IMG_7461.JPEG.jpg" alt="Video Song" />
+        <div>Video Song</div>
+        <button style="margin-top: 5px; background-color: #ff4040; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer;">Watch Now</button>
+      </a>
     </div>
   </section>
     <section id="posters">
@@ -239,11 +248,6 @@
         <p>Pranay Douthapuram</p>
       </div>
       <div class="card">
-        <img src="images\Screenshot 2025-07-09 192846.png" alt="Music Photo" />
-        <h3>Editor</h3>
-        <p>Brocken-C<br><a href="https://www.youtube.com/@BROCKENC7" target="_blank">Music</a></p>
-      </div>
-      <div class="card">
         <img src="images\Screenshot 2025-07-09 192846.png" alt="Lighting" />
         <h3>Lighting</h3>
         <p>Vivek</p>
@@ -258,6 +262,48 @@
   <section id="dubbing-airtists">
     <h2>Dubbing Airtists</h2>
     <div class="container">
+    </div>
+  </section>
+  <section id="songs">
+    <h2>Songs</h2>
+    <p>Discover this Song on Popular Streaming Platforms.</p>
+    <div class="container">
+      <div class="card">
+        <img src="images\pngkey.com-spotify-png-195418.png" alt="Song 1" />
+        <h3>Ooru Peru Akhandasthalam</h3>
+        <p>ISMART SUMAN CREATIONS</p>
+        <button onclick="window.open('https://open.spotify.com/track/316XdmNue9MOJ0BGaebhET?si=b5c0ed61261645b0', '_blank')">Play on Spotify</button>
+      </div>
+      <div class="card">
+        <img src="images\pngkey.com-apple-music-logo-png-11231.png" alt="Song 2" />
+        <h3>Ooru Peru Akhandasthalam</h3>
+        <p>ISMART SUMAN CREATIONS</p>
+        <button onclick="window.open('https://music.apple.com/gb/album/ooru-peru-akhandasthalam-feat-ismart-suman-creations/1798334641?i=1798334644', '_blank')">Play on Apple Music</button>
+      </div>
+      <div class="card">
+        <img src="images\Jio-Saavn.png" alt="Song 3" />
+        <h3>Ooru Peru Akhandasthalam</h3>
+        <p>ISMART SUMAN CREATIONS</p>
+        <button onclick="window.open('https://www.jiosaavn.com/song/ooru-peru-akhandasthalam-feat.-ismart-suman-creations/SQcyQT5Yc3o', '_blank')">Play on JioSaavan</button>
+      </div>
+      <div class="card">
+        <img src="images\62b32a1bb223544c209f5ec7.png" alt="Song 4" />
+        <h3>Ooru Peru Akhandasthalam</h3>
+        <p>ISMART SUMAN CREATIONS</p>
+        <button onclick="window.open('https://amazon.co.uk/music/player/tracks/B0DYF6S79Z?marketplaceId=A1F83G8C2ARO7P&musicTerritory=GB&ref=dm_sh_lt4vTwYJo4jiqku7mVIjvNeAP', '_blank')">Play on Amazon Music</button>
+      </div>
+      <div class="card">
+        <img src="images\348877370046211.png" alt="Song 5" />
+        <h3>Ooru Peru Akhandasthalam</h3>
+        <p>ISMART SUMAN CREATIONS</p>
+        <button onclick="window.open('https://music.youtube.com/watch?v=pKY7S1KsTqY&si=JehcQ15DlZShPUKb', '_blank')">Play on YT Music</button>
+      </div>
+      <div class="card">
+        <img src="images\IMG_7461.JPEG.jpg" alt="Song 6" />
+        <h3>Ooru Peru Akhandasthalam</h3>
+        <p>ISMART SUMAN CREATIONS</p>
+        <button onclick="window.open('https://youtu.be/uSojzhmpekQ', '_blank')">Play Video Song</button>
+      </div>
     </div>
   </section>
   <footer>
