@@ -54,6 +54,26 @@
       const details = btn.parentElement.querySelector('.details');
       details.style.display = details.style.display === 'block' ? 'none' : 'block';
     }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const scrollGallery = document.querySelector('.scroll-gallery');
+      if (scrollGallery) {
+        const scrollAmount = scrollGallery.querySelector('img').clientWidth + 10; // image width + gap
+        let scrollPosition = 0;
+        const maxScroll = scrollGallery.scrollWidth - scrollGallery.clientWidth;
+
+        setInterval(() => {
+          scrollPosition += scrollAmount;
+          if (scrollPosition > maxScroll) {
+            scrollPosition = 0;
+          }
+          scrollGallery.scrollTo({
+            left: scrollPosition,
+            behavior: 'smooth'
+          });
+        }, 5000);
+      }
+    });
   </script>
 </head>
 <body>
