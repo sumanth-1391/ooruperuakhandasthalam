@@ -1,0 +1,1 @@
+This file is created to outline the project structure since no files were found in the current directory.
