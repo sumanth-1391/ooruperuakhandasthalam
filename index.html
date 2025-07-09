@@ -33,6 +33,21 @@
     .gallery img { width: 300px; height: auto; border-radius: 8px; box-shadow: 0 0 10px rgba(255, 64, 64, 0.4); }
     footer { background: #000; color: #999; text-align: center; padding: 20px 10px; font-size: 0.9em; }
     footer a { color: #ff4040; text-decoration: none; }
+  }
+  .scroll-gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px;
+    padding: 20px;
+  }
+  .scroll-gallery img {
+    flex: 0 0 auto;
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 64, 64, 0.4);
+  }
   </style>
   <script>
     function toggleDetails(btn) {
@@ -53,7 +68,13 @@
     <a href="https://youtu.be/W8lAQ6z_dzY?si=LEU-V9UhXajDfcYY" target="_blank">Watch Now</a>
   </nav>
   <section id="home">
-    <div class="gallery">
+    <div class="gallery scroll-gallery">
+      <img src="images/IMG_5244.JPEG.jpg" alt="Poster 1" />
+      <img src="images/IMG_7128.JPEG.jpg" alt="Poster 2" />
+      <img src="images/IMG_5752.JPEG.jpg" alt="Poster 3" />
+      <img src="images/IMG_5811.JPEG.jpg" alt="Poster 4" />
+      <img src="images/IMG_6990.JPEG.jpg" alt="Poster 5" />
+      <img src="images/IMG_7496.JPEG.jpg" alt="Poster 6" />
     </div>
   </section>
     <section id="posters">
