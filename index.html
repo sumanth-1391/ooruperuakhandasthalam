@@ -24,14 +24,21 @@
 
   @media (max-width: 600px) {
     header {
-      flex-direction: column !important;
-      align-items: flex-start !important;
+      flex-direction: row !important;
+      justify-content: space-between !important;
+      align-items: center !important;
       padding: 10px 15px !important;
       height: auto !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
     }
     header h1 {
       font-size: 1.4em;
-      margin: 10px 0 0 0 !important;
+      margin: 0 !important;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 70vw;
     }
   }
 
