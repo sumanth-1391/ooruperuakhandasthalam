@@ -13,10 +13,9 @@
   <meta property="og:image" content="https://yourdomain.com/poster.jpg" />
   <meta property="og:url" content="https://ismartsumancreations.com/ooruperuakhandasthalam" />
   <meta property="og:type" content="website" />
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1750453272106079"
-     crossorigin="anonymous"></script>
   <style>
-    body { font-family: Arial, sans-serif; background: #111; color: #eee; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: #111; color: #eee; margin: 0; padding: 0; box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: inherit; }
     nav { background: #000; display: flex; justify-content: center; padding: 10px; }
     nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; }
     nav a:hover { color: #ff4040; }
@@ -24,56 +23,36 @@
     header { background: #222; padding: 20px; text-align: center; }
     header h1 { margin: 0; color: #ff4040; }
     .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
-    .card { background: #1c1c1c; border-radius: 10px; overflow: hidden; text-align: center; box-shadow: 0 0 10px rgba(255, 64, 64, 0.4); position: relative; }
-    .card img { width: 100%; height: 250px; object-fit: cover; }
+    .card { background: #1c1c1c; border-radius: 10px; overflow: hidden; text-align: center; box-shadow: 0 0 10px rgba(255, 64, 64, 0.4); position: relative; max-height: 400px; }
+    .card img { width: 100%; height: 250px; object-fit: cover; max-height: 250px; }
     .card h3 { margin: 10px 0 5px; font-size: 1.2em; color: #fff; }
     .card p { font-size: 0.9em; color: #aaa; }
-    .card button { display: inline-block; margin: 10px; padding: 8px 16px; background: #ff4040; color: #fff; border: none; border-radius: 5px; font: inherit; cursor: pointer; transition: background 0.3s ease; }
+    .card button { display: inline-block; margin: 10px 5px; padding: 8px 16px; background: #ff4040; color: #fff; border: none; border-radius: 5px; font: inherit; cursor: pointer; transition: background 0.3s ease; }
     .card button:hover { background: #e60000; }
     .details { display: none; padding: 10px; text-align: left; color: #ccc; font-size: 0.85em; }
     .gallery { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; padding: 20px; }
     .gallery img { width: 300px; height: auto; border-radius: 8px; box-shadow: 0 0 10px rgba(255, 64, 64, 0.4); }
     footer { background: #000; color: #999; text-align: center; padding: 20px 10px; font-size: 0.9em; }
-.scroll-gallery {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 10px;
-  padding: 20px;
-}
-.scroll-gallery img {
-  flex: 0 0 auto;
-  width: 300px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(255, 64, 64, 0.4);
-}
-</style>
+    .scroll-gallery {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 10px;
+      padding: 20px;
+    }
+    .scroll-gallery img {
+      flex: 0 0 auto;
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255, 64, 64, 0.4);
+    }
+  </style>
   <script>
     function toggleDetails(btn) {
       const details = btn.parentElement.querySelector('.details');
       details.style.display = details.style.display === 'block' ? 'none' : 'block';
     }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      const scrollGallery = document.querySelector('.scroll-gallery');
-      if (scrollGallery) {
-        const images = scrollGallery.querySelectorAll('img');
-        let currentIndex = 0;
-
-        setInterval(() => {
-          currentIndex++;
-          if (currentIndex >= images.length) {
-            currentIndex = 0;
-          }
-          const scrollAmount = images[currentIndex].offsetLeft;
-          scrollGallery.scrollTo({
-            left: scrollAmount,
-            behavior: 'smooth'
-          });
-        }, 5000);
-      }
-    });
   </script>
 </head>
 <body>
@@ -141,17 +120,17 @@
       </a>
     </div>
   </section>
-    <section id="posters">
-      <h2>Official Posters</h2>
-      <div class="gallery">
-        <img src="images/IMG_5244.JPEG.jpg" alt="Official Poster 1" />
-        <img src="images/IMG_7128.JPEG.jpg" alt="Official Poster 2" />
-        <img src="images/IMG_5752.JPEG.jpg" alt="Official Poster 3" />
-        <img src="images/IMG_5811.JPEG.jpg" alt="Official Poster 4" />
-        <img src="images/IMG_6990.JPEG.jpg" alt="Official Poster 5" />
-        <img src="images/IMG_7496.JPEG.jpg" alt="Official Poster 6" />
-      </div>
-    </section>
+  <section id="posters">
+    <h2>Official Posters</h2>
+    <div class="gallery">
+      <img src="images/IMG_5244.JPEG.jpg" alt="Official Poster 1" />
+      <img src="images/IMG_7128.JPEG.jpg" alt="Official Poster 2" />
+      <img src="images/IMG_5752.JPEG.jpg" alt="Official Poster 3" />
+      <img src="images/IMG_5811.JPEG.jpg" alt="Official Poster 4" />
+      <img src="images/IMG_6990.JPEG.jpg" alt="Official Poster 5" />
+      <img src="images/IMG_7496.JPEG.jpg" alt="Official Poster 6" />
+    </div>
+  </section>
   <section id="cast">
     <h2>Cast & Crew</h2>
     <div class="container">
@@ -159,35 +138,35 @@
         <img src="images\IMG-20250527-WA0006 - Copy.jpg" alt="Munendra">
         <h3>Munendra</h3>
         <button onclick="toggleDetails(this)">View Details</button>
-        <button onclick="alert('Followed!')" style="background: #007bff; margin-left: 5px;">Follow</button>
+        <a href="https://www.instagram.com/v3_muni?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><button style="background: #007bff; margin-left: 5px;">Follow</button></a>
         <div class="details">Role: Actor<br>Character: Sudha</div>
       </div>
       <div class="card">
         <img src="images\Screenshot_20250709-231211_Gallery.jpg" alt="Kishore">
         <h3>Kishore</h3>
         <button onclick="toggleDetails(this)">View Details</button>
-        <button onclick="alert('Followed!')" style="background: #007bff; margin-left: 5px;">Follow</button>
+        <a href="https://www.instagram.com/mr_attitude_793?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><button style="background: #007bff; margin-left: 5px;">Follow</button></a>
         <div class="details">Role: Actor<br>Character: Govind</div>
       </div>
       <div class="card">
         <img src="images\WhatsApp Image 2025-07-09 at 19.22.19_960ada4a.jpg" alt="Lokesh">
         <h3>Lokesh</h3>
         <button onclick="toggleDetails(this)">View Details</button>
-        <button onclick="alert('Followed!')" style="background: #007bff; margin-left: 5px;">Follow</button>
+        <a href="https://www.instagram.com/i_am_king_777___?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><button style="background: #007bff; margin-left: 5px;">Follow</button></a>
         <div class="details">Role: Actor<br>Character: Linga</div>
       </div>
       <div class="card">
         <img src="images\WhatsApp Image 2025-07-09 at 18.58.41_42d0ed3a.jpg" alt="Karthik">
         <h3>Karthik</h3>
         <button onclick="toggleDetails(this)">View Details</button>
-        <button onclick="alert('Followed!')" style="background: #007bff; margin-left: 5px;">Follow</button>
+        <a href="https://www.instagram.com/itz_karthi_soul?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><button style="background: #007bff; margin-left: 5px;">Follow</button></a>
         <div class="details">Role: Actor<br>Character: TBD</div>
       </div>
       <div class="card">
         <img src="images\WhatsApp Image 2025-07-09 at 17.56.35_89b80838.jpg"" alt="Kittu">
         <h3>Kittu</h3>
         <button onclick="toggleDetails(this)">View Details</button>
-        <button onclick="alert('Followed!')" style="background: #007bff; margin-left: 5px;">Follow</button>
+        <a href="https://www.instagram.com/stylish__kittu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><button style="background: #007bff; margin-left: 5px;">Follow</button></a>
         <div class="details">Role: Actor<br>Character: TBD</div>
       </div>
       <div class="card">
@@ -204,63 +183,74 @@
         <button onclick="alert('Followed!')" style="background: #007bff; margin-left: 5px;">Follow</button>
         <div class="details">Role: Actor<br>Character: TBD</div>
       </div>
+      <div class="card">
         <img src="images\Screenshot 2025-07-09 192846.png" alt="Satwik">
         <h3>Satwik</h3>
         <button onclick="toggleDetails(this)">View Details</button>
+        <button onclick="alert('Followed!')" style="background: #007bff; margin-left: 5px;">Follow</button>
         <div class="details">Role: Actor<br>Character: TBD</div>
       </div>
       <div class="card">
         <img src="images\Screenshot 2025-07-09 192846.png" alt="Govind">
         <h3>Govind</h3>
         <button onclick="toggleDetails(this)">View Details</button>
+        <button onclick="alert('Followed!')" style="background: #007bff; margin-left: 5px;">Follow</button>
         <div class="details">Role: Actor<br>Character: Swamiji</div>
       </div>
       <div class="card">
         <img src="images\WhatsApp Image 2025-07-09 at 19.22.18_b582ed13.jpg" alt="Chandu">
         <h3>Chandu</h3>
         <button onclick="toggleDetails(this)">View Details</button>
+        <a href="https://www.instagram.com/laddu_edits_pinky?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><button style="background: #007bff; margin-left: 5px;">Follow</button></a>
         <div class="details">Role: Actor<br>Character: Kesava</div>
       </div>
       <div class="card">
         <img src="images\Screenshot 2025-07-09 192846.png" alt="Vikram">
         <h3>Vikram</h3>
         <button onclick="toggleDetails(this)">View Details</button>
+        <a href="https://www.instagram.com/k.vikram1717/?utm_source=ig_web_button_share_sheet" target="_blank"><button style="background: #007bff; margin-left: 5px;">Follow</button></a>
         <div class="details">Role: Actor<br>Character: Arun</div>
       </div>
       <div class="card">
         <img src="images\Screenshot 2025-07-09 192846.png" alt="Charan">
         <h3>Charan</h3>
         <button onclick="toggleDetails(this)">View Details</button>
+        <a href="https://www.instagram.com/stylish._.charan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><button style="background: #007bff; margin-left: 5px;">Follow</button></a>
         <div class="details">Role: Actor<br>Character: Seenu</div>
       </div>
       <div class="card">
         <img src="images\IMG_20250531_081921.jpg" alt="Rayudu">
         <h3>Rayudu</h3>
         <button onclick="toggleDetails(this)">View Details</button>
+        <a href="https://www.instagram.com/rayudu_chinna94?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><button style="background: #007bff; margin-left: 5px;">Follow</button></a>
         <div class="details">Role: Actor<br>Character: Veerappa</div>
       </div>
       <div class="card">
         <img src="images\Screenshot 2025-07-09 192846.png" alt="Raju">
         <h3>Raju</h3>
         <button onclick="toggleDetails(this)">View Details</button>
+        <button onclick="alert('Followed!')" style="background: #007bff; margin-left: 5px;">Follow</button>
         <div class="details">Role: Actor<br>Character: Nani</div>
       </div>
       <div class="card">
         <img src="images\Picsart_25-07-06_09-40-43-027.jpg" alt="Allu Arjun">
         <h3>Allu Arjun</h3>
         <button onclick="toggleDetails(this)">View Details</button>
+        <a href="https://www.instagram.com/alluarjunb18?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><button style="background: #007bff; margin-left: 5px;">Follow</button></a>
         <div class="details">Role: Actor<br>Character: Dili</div>
       </div>
       <div class="card">
         <img src="images\IMG_5317.JPEG.jpg" alt="Sumanth">
         <h3>Sumanth</h3>
         <button onclick="toggleDetails(this)">View Details</button>
+        <a href="https://www.instagram.com/iam_sumanth_139/" target="_blank"><button style="background: #007bff; margin-left: 5px;">Follow</button></a>
         <div class="details">Role: Actor<br>Character: Rudra</div>
       </div>
       <div class="card">
         <img src="images\WhatsApp Image 2025-07-09 at 19.08.39_aaf1aa92.jpg" alt="Akhil">
         <h3>Akhil</h3>
         <button onclick="toggleDetails(this)">View Details</button>
+        <button onclick="alert('Followed!')" style="background: #007bff; margin-left: 5px;">Follow</button>
         <div class="details">Role: Actor<br>Character: NA</div>
       </div>
     </div>
@@ -284,35 +274,45 @@
       <div class="card">
         <img src="images/IMG_5317.JPEG.jpg" alt="Director Photo" />
         <h3>Director-Story-Screenplay</h3>
-        <button onclick="alert('Followed!')" style="background: #007bff; margin-left: 5px;">Follow</button>
         <p>Sumanth Bommepalli</p>
+        <a href="https://www.instagram.com/iam_sumanth_139/" target="_blank" style="text-decoration: none;"><button style="background: #007bff; margin: 5px auto 0 auto; display: block;">Follow</button></a>
       </div>
       <div class="card">
         <img src="images/Screenshot 2025-07-09 192846.png" alt="Producer Photo" />
         <h3>Producer</h3>
-        <button onclick="alert('Followed!')" style="background: #007bff; margin-left: 5px;">Follow</button>
         <p>Rajaiah Bommepalli</p>
+        <a href="https://www.instagram.com/rajaiah1974/?utm_source=ig_web_button_share_sheet" target="_blank" style="text-decoration: none;"><button style="background: #007bff; margin: 5px auto 0 auto; display: block;">Follow</button></a>
       </div>
       <div class="card">
         <img src="images/Picsart_22-09-18_18-..._imresizer.jpg" alt="Streaming Partner Photo" />
         <h3>streaming partner</h3>
         <p>ISMART SUMAN CREATIONS</p>
+        <a href="https://www.instagram.com/ismart_suman_creations?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" style="text-decoration: none;"><button style="background: #007bff; margin: 5px auto 0 auto; display: block;">Follow</button></a>
       </div>
       <div class="card">
         <img src="images/WhatsApp Image 2025-07-09 at 17.29.52_2604c838.jpg" alt="Tamil Translator Photo" />
         <h3>Tamil - Translator & Writer</h3>
         <p>Mohaldeen A. Majeed
         </p>
+        <a href="https://www.instagram.com/mohaideenmajeeth?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" style="text-decoration: none;"><button style="background: #007bff; margin: 5px auto 0 auto; display: block;">Follow</button></a>
       </div>
       <div class="card">
         <img src="images/WhatsApp Image 2025-07-09 at 18.54.12_2454072e.jpg" alt="Kannada Translator Photo" />
         <h3>Kannada - Translator & Writer</h3>
         <p>Pranay Douthapuram</p>
+        <a href="https://www.instagram.com/pranay_1413_/?utm_source=ig_web_button_share_sheet" target="_blank" style="text-decoration: none;"><button style="background: #007bff; margin: 5px auto 0 auto; display: block;">Follow</button></a>
       </div>
       <div class="card">
         <img src="images/IMG_0841.JPG" alt="Sunil D.O.P" />
         <h3>D.O.P</h3>
         <p>Sunil</p>
+        <a href="https://www.instagram.com/__kiddozz.x__?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" style="text-decoration: none;"><button style="background: #007bff; margin: 5px auto 0 auto; display: block;">Follow</button></a>
+      </div>
+      <div class="card">
+        <img src="images/Screenshot 2025-07-09 192846.png" alt="Vivek Lighting" />
+        <h3>D.O.P</h3>
+        <p>Vivek</p>
+        <a href="https://www.instagram.com/iam_vivek_431?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" style="text-decoration: none;"><button style="background: #007bff; margin: 5px auto 0 auto; display: block;">Follow</button></a>
       </div>
     </div>
   </section>
@@ -327,11 +327,6 @@
     <div class="container">
       <div class="card">
         <img src="images/pngkey.com-spotify-png-195418.png" alt="Song 1" />
-        <h3>Ooru Peru Akhandasthalam</h3>
-        <p>ISMART SUMAN CREATIONS</p>
-        <button onclick="window.open('https://open.spotify.com/track/316XdmNue9MOJ0BGaebhET?si=b5c0ed61261645b0', '_blank')">Play on Spotify</button>
-      </div>
-        <img src="images\pngkey.com-spotify-png-195418.png" alt="Song 1" />
         <h3>Ooru Peru Akhandasthalam</h3>
         <p>ISMART SUMAN CREATIONS</p>
         <button onclick="window.open('https://open.spotify.com/track/316XdmNue9MOJ0BGaebhET?si=b5c0ed61261645b0', '_blank')">Play on Spotify</button>
@@ -376,4 +371,3 @@
   </footer>
 </body>
 </html>
-
