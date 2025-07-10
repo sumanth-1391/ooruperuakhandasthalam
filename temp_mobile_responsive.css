@@ -43,4 +43,13 @@
   div[style*="background: #222; color: #ff4040; font-weight: bold; white-space: nowrap; overflow: hidden; box-sizing: border-box;"] {
     font-size: 0.9em !important;
   }
+  .container {
+    width: 100% !important;
+    padding: 0 10px !important;
+    grid-template-columns: 1fr !important;
+  }
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 }
