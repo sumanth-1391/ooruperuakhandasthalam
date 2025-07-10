@@ -34,8 +34,6 @@
     .gallery { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; padding: 20px; }
     .gallery img { width: 300px; height: auto; border-radius: 8px; box-shadow: 0 0 10px rgba(255, 64, 64, 0.4); }
     footer { background: #000; color: #999; text-align: center; padding: 20px 10px; font-size: 0.9em; }
-    footer a { color: #ff4040; text-decoration: none; }
-}
 .scroll-gallery {
   display: flex;
   overflow-x: auto;
@@ -134,12 +132,12 @@
       <a href="https://yt.nimlinks.com/wyZO0WLSVfA" target="_blank" style="text-align:center; display:block; color:#ff4040; font-weight:bold;">
         <img src="images/IMG_7334.JPEG.jpg" alt="Full Short Film" />
         <div>Full Short Film</div>
-        <button style="margin-top: 5px; background-color: #ff4040; color: white; border: none; border-radius: 5px; cursor: pointer;">Watch Now</button>
+        <button style="margin-top: 5px; background-color: #ff4040; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer;">Watch Now</button>
       </a>
       <a href="https://youtu.be/hB0bIsSiSoU" target="_blank" style="text-align:center; display:block; color:#ff4040; font-weight:bold;">
         <img src="images/IMG_7461.JPEG.jpg" alt="Video Song" />
         <div>Video Song</div>
-        <button style="margin-top: 5px; background-color: #ff4040; color: white; border: none; border-radius: 5px; cursor: pointer;">Watch Now</button>
+        <button style="margin-top: 5px; background-color: #ff4040; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer;">Watch Now</button>
       </a>
     </div>
   </section>
@@ -161,18 +159,21 @@
         <img src="images\IMG-20250527-WA0006 - Copy.jpg" alt="Munendra">
         <h3>Munendra</h3>
         <button onclick="toggleDetails(this)">View Details</button>
+        <button onclick="alert('Followed!')" style="background: #007bff; margin-left: 5px;">Follow</button>
         <div class="details">Role: Actor<br>Character: Sudha</div>
       </div>
       <div class="card">
         <img src="images\Screenshot_20250709-231211_Gallery.jpg" alt="Kishore">
         <h3>Kishore</h3>
         <button onclick="toggleDetails(this)">View Details</button>
+        <button onclick="alert('Followed!')" style="background: #007bff; margin-left: 5px;">Follow</button>
         <div class="details">Role: Actor<br>Character: Govind</div>
       </div>
       <div class="card">
         <img src="images\WhatsApp Image 2025-07-09 at 19.22.19_960ada4a.jpg" alt="Lokesh">
         <h3>Lokesh</h3>
         <button onclick="toggleDetails(this)">View Details</button>
+        <button onclick="alert('Followed!')" style="background: #007bff; margin-left: 5px;">Follow</button>
         <div class="details">Role: Actor<br>Character: Linga</div>
       </div>
       <div class="card">
@@ -277,38 +278,33 @@
     <h2>Departments</h2>
     <div class="container">
       <div class="card">
-        <img src="images\IMG_5317.JPEG.jpg" alt="Director Photo" />
+        <img src="images/IMG_5317.JPEG.jpg" alt="Director Photo" />
         <h3>Director-Story-Screenplay</h3>
         <p>Sumanth Bommepalli</p>
       </div>
       <div class="card">
-        <img src="images\Screenshot 2025-07-09 192846.png" alt="Producer Photo" />
+        <img src="images/Screenshot 2025-07-09 192846.png" alt="Producer Photo" />
         <h3>Producer</h3>
         <p>Rajaiah Bommepalli</p>
       </div>
       <div class="card">
-        <img src="images\Picsart_22-09-18_18-..._imresizer.jpg" alt="Streaming Partner Photo" />
+        <img src="images/Picsart_22-09-18_18-..._imresizer.jpg" alt="Streaming Partner Photo" />
         <h3>streaming partner</h3>
         <p>ISMART SUMAN CREATIONS</p>
       </div>
       <div class="card">
-        <img src="images\WhatsApp Image 2025-07-09 at 17.29.52_2604c838.jpg" alt="Tamil Translator Photo" />
+        <img src="images/WhatsApp Image 2025-07-09 at 17.29.52_2604c838.jpg" alt="Tamil Translator Photo" />
         <h3>Tamil - Translator & Writer</h3>
         <p>Mohaldeen A. Majeed
         </p>
       </div>
       <div class="card">
-        <img src="images\WhatsApp Image 2025-07-09 at 18.54.12_2454072e.jpg" alt="Kannada Translator Photo" />
+        <img src="images/WhatsApp Image 2025-07-09 at 18.54.12_2454072e.jpg" alt="Kannada Translator Photo" />
         <h3>Kannada - Translator & Writer</h3>
         <p>Pranay Douthapuram</p>
       </div>
       <div class="card">
-        <img src="images\Screenshot 2025-07-09 192846.png" alt="Lighting" />
-        <h3>Lighting</h3>
-        <p>Vivek</p>
-      </div>
-      <div class="card">
-        <img src="images\IMG_0841.JPG" alt="D.O.P" />
+        <img src="images/IMG_0841.JPG" alt="Sunil D.O.P" />
         <h3>D.O.P</h3>
         <p>Sunil</p>
       </div>
@@ -324,6 +320,11 @@
     <p>Discover this Song on Popular Streaming Platforms.</p>
     <div class="container">
       <div class="card">
+        <img src="images/pngkey.com-spotify-png-195418.png" alt="Song 1" />
+        <h3>Ooru Peru Akhandasthalam</h3>
+        <p>ISMART SUMAN CREATIONS</p>
+        <button onclick="window.open('https://open.spotify.com/track/316XdmNue9MOJ0BGaebhET?si=b5c0ed61261645b0', '_blank')">Play on Spotify</button>
+      </div>
         <img src="images\pngkey.com-spotify-png-195418.png" alt="Song 1" />
         <h3>Ooru Peru Akhandasthalam</h3>
         <p>ISMART SUMAN CREATIONS</p>
