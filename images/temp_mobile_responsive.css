@@ -1,0 +1,55 @@
+@media (max-width: 600px) {
+  header {
+    padding: 20px 10px !important;
+    text-align: center !important;
+  }
+  header > div {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  header > div img {
+    margin: 0 0 10px 0 !important;
+    height: 60px !important;
+  }
+  header > div h1 {
+    font-size: 1.8em !important;
+  }
+  header nav {
+    position: static !important;
+    transform: none !important;
+    top: auto !important;
+    right: auto !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    font-size: 0.9em !important;
+    gap: 10px !important;
+    margin-top: 10px !important;
+  }
+  header nav div {
+    flex-direction: row !important;
+    gap: 10px !important;
+  }
+  #current-time {
+    font-size: 0.8em !important;
+  }
+  nav {
+    flex-wrap: wrap !important;
+    padding: 5px !important;
+  }
+  nav a {
+    margin: 5px 8px !important;
+    font-size: 0.9em !important;
+  }
+  div[style*="background: #222; color: #ff4040; font-weight: bold; white-space: nowrap; overflow: hidden; box-sizing: border-box;"] {
+    font-size: 0.9em !important;
+  }
+  .container {
+    width: 100% !important;
+    padding: 0 10px !important;
+    grid-template-columns: 1fr !important;
+  }
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
