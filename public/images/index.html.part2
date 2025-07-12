@@ -1,0 +1,308 @@
+<script>
+    function toggleDetails(btn) {
+      const details = btn.parentElement.querySelector('.details');
+      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const scrollGallery = document.querySelector('.scroll-gallery');
+      if (scrollGallery) {
+        const images = scrollGallery.querySelectorAll('img');
+        let currentIndex = 0;
+
+        setInterval(() => {
+          currentIndex++;
+          if (currentIndex >= images.length) {
+            currentIndex = 0;
+          }
+          const scrollAmount = images[currentIndex].offsetLeft;
+          scrollGallery.scrollTo({
+            left: scrollAmount,
+            behavior: 'smooth'
+          });
+        }, 5000);
+      }
+    });
+  </script>
+</head>
+<body>
+  <header style="position: relative; padding: 40px;">
+    <div style="display: flex; align-items: center;">
+      <img src="images\IMG_7788.PNG" alt="Title Image" style="height: 80px; margin-right: 15px;" />
+      <h1 style="margin: 0; color: #ff4040; font-size: 2.5em;">Ooru Peru Akhandasthalam</h1>
+    </div>
+    <nav style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); font-family: Arial, sans-serif; font-weight: bold; font-size: 1.1em; background: transparent; display: flex; flex-direction: column; align-items: flex-end; gap: 5px;">
+      <div style="display: flex; gap: 15px;">
+        <a href="https://youtube.com/c/ISMARTSUMANCREATIONS" target="_blank" style="color: #ff4040; text-decoration: none; background: transparent; text-transform: uppercase;">SUBSCRIBE</a>
+        <a href="https://instagram.com/ismart_suman_creations?igshid=YmMyMTA2M2Y=" target="_blank" style="color: #ff4040; text-decoration: none; background: transparent; text-transform: uppercase;">INSTAGRAM</a>
+        <a href="https://ismartsumancreations.wixsite.com/ismartsumancreations" target="_blank" style="color: #ff4040; text-decoration: none; background: transparent; text-transform: uppercase;">WEBSITE</a>
+        <a href="https://whatsapp.com/channel/0029Vb68FsBGpLHNMIvhFa1Z" target="_blank" style="color: #ff4040; text-decoration: none; background: transparent; text-transform: uppercase;">WHATSAPP</a>
+      </div>
+      <div id="current-time" style="color: #ff4040; font-size: 0.9em; font-weight: normal;"></div>
+    </nav>
+    <script>
+      function updateTime() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString();
+        document.getElementById('current-time').textContent = timeString;
+      }
+      setInterval(updateTime, 1000);
+      updateTime();
+    </script>
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#cast">Cast &amp; Crew</a>
+    <a href="#about">About Film</a>
+    <a href="#departments">Departments</a>
+    <a href="https://yt.nimlinks.com/wyZO0WLSVfA" target="_blank">Watch Now</a>
+  </nav>
+  <div style="height: 4px; background-color: #ff4040; margin: 5px 0;"></div>
+  <div style="background: #222; color: #ff4040; font-weight: bold; white-space: nowrap; overflow: hidden; box-sizing: border-box;">
+    <div style="display: inline-block; padding-left: 100%; animation: scroll-left 15s linear infinite;">
+      Welcome to Ooru Peru Akhandasthalam - Stay tuned for updates! - Trailer on AUGUST 14th at <span style='color:white;'>5:45pm</span> - Film Release on AUGUST 25th at <span style='color:white;'>5:45pm</span>         Video Song  on AUGUST 28th at <span style='color:white;'>7:30am</span>      
+    </div>
+  </div>
+  <style>
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+  <section id="home">
+    <div class="gallery scroll-gallery">
+      <a href="https://youtu.be/ehXBwtwipM0" target="_blank" style="text-align:center; display:block; color:#ff4040; font-weight:bold;">
+        <img src="images/IMG_7192.JPEG.jpg" alt="Trailer" />
+        <div>Trailer</div>
+        <button style="margin-top: 5px; background-color: #ff4040; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer;">Watch Now</button>
+      </a>
+      <a href="https://yt.nimlinks.com/wyZO0WLSVfA" target="_blank" style="text-align:center; display:block; color:#ff4040; font-weight:bold;">
+        <img src="images/IMG_7334.JPEG.jpg" alt="Full Short Film" />
+        <div>Full Short Film</div>
+        <button style="margin-top: 5px; background-color: #ff4040; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer;">Watch Now</button>
+      </a>
+      <a href="https://youtu.be/hB0bIsSiSoU" target="_blank" style="text-align:center; display:block; color:#ff4040; font-weight:bold;">
+        <img src="images/IMG_7461.JPEG.jpg" alt="Video Song" />
+        <div>Video Song</div>
+        <button style="margin-top: 5px; background-color: #ff4040; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer;">Watch Now</button>
+      </a>
+    </div>
+  </section>
+    <section id="posters">
+      <h2>Official Posters</h2>
+      <div class="gallery">
+        <img src="images/IMG_5244.JPEG.jpg" alt="Official Poster 1" />
+        <img src="images/IMG_7128.JPEG.jpg" alt="Official Poster 2" />
+        <img src="images/IMG_5752.JPEG.jpg" alt="Official Poster 3" />
+        <img src="images/IMG_5811.JPEG.jpg" alt="Official Poster 4" />
+        <img src="images/IMG_6990.JPEG.jpg" alt="Official Poster 5" />
+        <img src="images/IMG_7496.JPEG.jpg" alt="Official Poster 6" />
+      </div>
+    </section>
+  <section id="cast">
+    <h2>Cast & Crew</h2>
+    <div class="container">
+      <div class="card">
+        <img src="images\IMG-20250527-WA0006 - Copy.jpg" alt="Munendra">
+        <h3>Munendra</h3>
+        <button onclick="toggleDetails(this)">View Details</button>
+        <div class="details">Role: Actor<br>Character: Sudha</div>
+      </div>
+      <div class="card">
+        <img src="images\Screenshot 2025-07-09 192846.png" alt="Kishore">
+        <h3>Kishore</h3>
+        <button onclick="toggleDetails(this)">View Details</button>
+        <div class="details">Role: Actor<br>Character: Govind</div>
+      </div>
+      <div class="card">
+        <img src="images\WhatsApp Image 2025-07-09 at 19.22.19_960ada4a.jpg" alt="Lokesh">
+        <h3>Lokesh</h3>
+        <button onclick="toggleDetails(this)">View Details</button>
+        <div class="details">Role: Actor<br>Character: Linga</div>
+      </div>
+      <div class="card">
+        <img src="images\WhatsApp Image 2025-07-09 at 18.58.41_42d0ed3a.jpg" alt="Karthik">
+        <h3>Karthik</h3>
+        <button onclick="toggleDetails(this)">View Details</button>
+        <div class="details">Role: Actor<br>Character: TBD</div>
+      </div>
+      <div class="card">
+        <img src="images\WhatsApp Image 2025-07-09 at 17.56.35_89b80838.jpg"" alt="Kittu">
+        <h3>Kittu</h3>
+        <button onclick="toggleDetails(this)">View Details</button>
+        <div class="details">Role: Actor<br>Character: TBD</div>
+      </div>
+      <div class="card">
+        <img src="images\WhatsApp Image 2025-07-09 at 18.41.19_860b29c7.jpg" alt="Rajesh">
+        <h3>Rajesh</h3>
+        <button onclick="toggleDetails(this)">View Details</button>
+        <div class="details">Role: Actor<br>Character: TBD</div>
+      </div>
+      <div class="card">
+        <img src="images\Screenshot 2025-07-09 192846.png" alt="Govind">
+        <h3>Govind</h3>
+        <button onclick="toggleDetails(this)">View Details</button>
+        <div class="details">Role: Actor<br>Character: Swamiji</div>
+      </div>
+      <div class="card">
+        <img src="images\WhatsApp Image 2025-07-09 at 19.22.18_b582ed13.jpg" alt="Chandu">
+        <h3>Chandu</h3>
+        <button onclick="toggleDetails(this)">View Details</button>
+        <div class="details">Role: Actor<br>Character: Kesava</div>
+      </div>
+      <div class="card">
+        <img src="images\Screenshot 2025-07-09 192846.png" alt="Vikram">
+        <h3>Vikram</h3>
+        <button onclick="toggleDetails(this)">View Details</button>
+        <div class="details">Role: Actor<br>Character: Arun</div>
+      </div>
+      <div class="card">
+        <img src="images\Screenshot 2025-07-09 192846.png" alt="Charan">
+        <h3>Charan</h3>
+        <button onclick="toggleDetails(this)">View Details</button>
+        <div class="details">Role: Actor<br>Character: Seenu</div>
+      </div>
+      <div class="card">
+        <img src="images\IMG_20250531_081921.jpg" alt="Rayudu">
+        <h3>Rayudu</h3>
+        <button onclick="toggleDetails(this)">View Details</button>
+        <div class="details">Role: Actor<br>Character: Veerappa</div>
+      </div>
+      <div class="card">
+        <img src="images\Screenshot 2025-07-09 192846.png" alt="Raju">
+        <h3>Raju</h3>
+        <button onclick="toggleDetails(this)">View Details</button>
+        <div class="details">Role: Actor<br>Character: Nani</div>
+      </div>
+      <div class="card">
+        <img src="images\Picsart_25-07-06_09-40-43-027.jpg" alt="Allu Arjun">
+        <h3>Allu Arjun</h3>
+        <button onclick="toggleDetails(this)">View Details</button>
+        <div class="details">Role: Actor<br>Character: Dili</div>
+      </div>
+      <div class="card">
+        <img src="images\IMG_5317.JPEG.jpg" alt="Sumanth">
+        <h3>Sumanth</h3>
+        <button onclick="toggleDetails(this)">View Details</button>
+        <div class="details">Role: Actor<br>Character: Rudra</div>
+      </div>
+      <div class="card">
+        <img src="images\WhatsApp Image 2025-07-09 at 19.08.39_aaf1aa92.jpg" alt="Akhil">
+        <h3>Akhil</h3>
+        <button onclick="toggleDetails(this)">View Details</button>
+        <div class="details">Role: Actor<br>Character: NA</div>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <h2>About the Film</h2>
+    <p>
+      Get ready for a chilling supernatural thriller that explores caste injustice, rural folklore, and the terrifying rage of a spirit denied peace. "Ooru Peru Akhandasthalam" is a Telugu short film that tells the story of a group of friends who unknowingly awaken a long-dormant curse when they enter an abandoned village for fun. The soul of Rudra, a boy burned alive for crossing caste lines, now returns every Amavasya—not to haunt, but to seek judgment.<br/><br/>
+
+      Directed by Sumanth Bommepalli and produced by Rajaiah Bommepalli, "Ooru Peru Akhandasthalam" is a 41:45-minute film that promises to deliver a thrilling experience. The film is available in Telugu, with Tamil, Kannada, and Hindi versions coming soon. You can watch the Telugu version on YouTube or listen to the song on popular streaming platforms like Spotify, Apple Music, and JioSaavan.<br/><br/>
+
+      The film's music is composed by Brocken-C, and the art direction is handled by Munikrishna. The cast includes Munendra, Kishore, Lokesh, Muraga, Govind, Chandu, Vikram, Charan, Bharath, Vivek, Sunil, Rayudu, Vimala Raju, Kumar, and others. With its unique blend of supernatural thriller and social horror elements, "Ooru Peru Akhandasthalam" is sure to leave a lasting impact on its audience.The film features Munendra as Sudha, Kishore as Govind, Lokesh as Linga, Govind as Swamiji, Chandu as Kesava, Vikram as Arun, Charan as Seenu, Rayudu as Veerappa, Raju as Nani, a special appearance by Allu Arjun as Dili, Sumanth as Rudra, and Rajamma as Rudra's Amma..<br/><br/>
+
+      Follow ISMART SUMAN CREATIONS on Instagram, Facebook, and their website to stay updated on the film's progress and upcoming releases.
+    </p>
+  </section>
+  <section id="departments">
+    <h2>Departments</h2>
+    <div class="container">
+      <div class="card">
+        <img src="images\IMG_5317.JPEG.jpg" alt="Director Photo" />
+        <h3>Director-Story-Screenplay</h3>
+        <p>Sumanth Bommepalli</p>
+      </div>
+      <div class="card">
+        <img src="images\Screenshot 2025-07-09 192846.png" alt="Producer Photo" />
+        <h3>Producer</h3>
+        <p>Rajaiah Bommepalli</p>
+      </div>
+      <div class="card">
+        <img src="images\Picsart_22-09-18_18-..._imresizer.jpg" alt="Streaming Partner Photo" />
+        <h3>streaming partner</h3>
+        <p>ISMART SUMAN CREATIONS</p>
+      </div>
+      <div class="card">
+        <img src="images\WhatsApp Image 2025-07-09 at 17.29.52_2604c838.jpg" alt="Tamil Translator Photo" />
+        <h3>Tamil - Translator & Writer</h3>
+        <p>Mohaldeen A. Majeed
+        </p>
+      </div>
+      <div class="card">
+        <img src="images\WhatsApp Image 2025-07-09 at 18.54.12_2454072e.jpg" alt="Kannada Translator Photo" />
+        <h3>Kannada - Translator & Writer</h3>
+        <p>Pranay Douthapuram</p>
+      </div>
+      <div class="card">
+        <img src="images\Screenshot 2025-07-09 192846.png" alt="Lighting" />
+        <h3>Lighting</h3>
+        <p>Vivek</p>
+      </div>
+      <div class="card">
+        <img src="images\IMG_0841.JPG" alt="D.O.P Sunil" />
+        <h3>D.O.P</h3>
+        <p>Sunil</p>
+      </div>
+    </div>
+  </section>
+  <section id="dubbing-airtists">
+    <h2>Dubbing Airtists</h2>
+    <div class="container">
+    </div>
+  </section>
+  <section id="songs">
+    <h2>Songs</h2>
+    <p>Discover this Song on Popular Streaming Platforms.</p>
+    <div class="container">
+      <div class="card">
+        <img src="images\pngkey.com-spotify-png-195418.png" alt="Song 1" />
+        <h3>Ooru Peru Akhandasthalam</h3>
+        <p>ISMART SUMAN CREATIONS</p>
+        <button onclick="window.open('https://open.spotify.com/track/316XdmNue9MOJ0BGaebhET?si=b5c0ed61261645b0', '_blank')">Play on Spotify</button>
+      </div>
+      <div class="card">
+        <img src="images\pngkey.com-apple-music-logo-png-11231.png" alt="Song 2" />
+        <h3>Ooru Peru Akhandasthalam</h3>
+        <p>ISMART SUMAN CREATIONS</p>
+        <button onclick="window.open('https://music.apple.com/gb/album/ooru-peru-akhandasthalam-feat-ismart-suman-creations/1798334641?i=1798334644', '_blank')">Play on Apple Music</button>
+      </div>
+      <div class="card">
+        <img src="images\Jio-Saavn.png" alt="Song 3" />
+        <h3>Ooru Peru Akhandasthalam</h3>
+        <p>ISMART SUMAN CREATIONS</p>
+        <button onclick="window.open('https://www.jiosaavn.com/song/ooru-peru-akhandasthalam-feat.-ismart-suman-creations/SQcyQT5Yc3o', '_blank')">Play on JioSaavan</button>
+      </div>
+      <div class="card">
+        <img src="images\62b32a1bb223544c209f5ec7.png" alt="Song 4" />
+        <h3>Ooru Peru Akhandasthalam</h3>
+        <p>ISMART SUMAN CREATIONS</p>
+        <button onclick="window.open('https://amazon.co.uk/music/player/tracks/B0DYF6S79Z?marketplaceId=A1F83G8C2ARO7P&musicTerritory=GB&ref=dm_sh_lt4vTwYJo4jiqku7mVIjvNeAP', '_blank')">Play on Amazon Music</button>
+      </div>
+      <div class="card">
+        <img src="images\348877370046211.png" alt="Song 5" />
+        <h3>Ooru Peru Akhandasthalam</h3>
+        <p>ISMART SUMAN CREATIONS</p>
+        <button onclick="window.open('https://music.youtube.com/watch?v=pKY7S1KsTqY&si=JehcQ15DlZShPUKb', '_blank')">Play on YT Music</button>
+      </div>
+      <div class="card">
+        <img src="images\IMG_7461.JPEG.jpg" alt="Song 6" />
+        <h3>Ooru Peru Akhandasthalam</h3>
+        <p>ISMART SUMAN CREATIONS</p>
+        <button onclick="window.open('https://youtu.be/uSojzhmpekQ', '_blank')">Play Video Song</button>
+      </div>
+    </div>
+  </section>
+  <section id="rating" style="background: #222; color: #ff4040; text-align: center; padding: 20px; font-size: 1.2em; font-weight: bold;">
+    Rating: &#9733; &#9733; &#9733; &#9733; &#9734; (4/5)
+  </section>
+  <footer>
+    &copy; 2025 ISMART SUMAN CREATIONS. All Rights Reserved.
+  </footer>
+</body>
+</html>
