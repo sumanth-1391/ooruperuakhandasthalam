@@ -5,4 +5,19 @@
     <lastmod>2025-07-12</lastmod>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://ooruperuakhandasthalam.vercel.app/#about</loc>
+    <lastmod>2025-07-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ooruperuakhandasthalam.vercel.app/#cast</loc>
+    <lastmod>2025-07-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ooruperuakhandasthalam.vercel.app/#songs</loc>
+    <lastmod>2025-07-12</lastmod>
+    <priority>0.7</priority>
+  </url>
 </urlset>
